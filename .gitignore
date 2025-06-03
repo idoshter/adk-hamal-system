@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
+
+# Logs
+*.log
+
+# Compiled PDFs (if used)
+*.pdf
+
+# Secrets
+*.env
+.env.*
+apikey.txt
+
+# CSV data files
+events_log.csv
+
+# AI Studio/ADK generated
+__adk_cache__/
+*.checkpoint
