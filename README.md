@@ -40,8 +40,6 @@ The chatbot replaces traditional emergency operations systems by:
 
 ## 🧱 Architecture
 
-> 🖼️ _Insert your architecture diagram here_
-
 Suggested diagram structure:
 
 ![Architecture Diagram](assets/architecture.png)
