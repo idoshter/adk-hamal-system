@@ -44,9 +44,7 @@ The chatbot replaces traditional emergency operations systems by:
 
 Suggested diagram structure:
 
-```
-User → Root Agent → Sub-Agents (Create / Update / List / Summary) → Tools (CSV / Notify / PDF)
-```
+![Architecture Diagram](assets/architecture.png)
 
 ---
 
@@ -166,7 +164,7 @@ http://localhost:8000/dev-ui?app=CommandCenterRootAgent
 
 ---
 
-## 📸 Attachments
+<!-- ## 📸 Attachments
 
 > ✅ Add here:
 >
@@ -174,7 +172,7 @@ http://localhost:8000/dev-ui?app=CommandCenterRootAgent
 > - Screenshot of Dev UI
 > - Architecture diagram (PNG/SVG)
 
----
+--- -->
 
 ## ✍️ Authors
 
