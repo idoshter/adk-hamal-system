@@ -1,4 +1,3 @@
-
 # 🛡️ Multi-Agent Emergency Command Center (ADK-based)
 
 This project simulates a multi-agent operational command center designed to handle emergency events using Google’s Agent Development Kit (ADK). It mimics functionalities of a real command center (חמ״ל), allowing natural Hebrew communication for reporting, updating, and summarizing incidents.
@@ -19,23 +18,23 @@ The chatbot replaces traditional emergency operations systems by:
 
 ## 🧠 Agents
 
-| Agent Name              | Description                                                                 |
-|-------------------------|-----------------------------------------------------------------------------|
-| `CommandCenterRootAgent` | Routes incoming Hebrew instructions to the correct sub-agent                |
-| `CreateEventAgent`      | Creates a new event and appends it to a CSV. Triggers notifications         |
-| `UpdateEventAgent`      | Updates specific fields in an existing event                                |
-| `ListEventsAgent`       | Lists all current open events in table format                               |
-| `SummaryAgent`          | Generates a summary report and exports it as PDF                            |
+| Agent Name               | Description                                                         |
+| ------------------------ | ------------------------------------------------------------------- |
+| `CommandCenterRootAgent` | Routes incoming Hebrew instructions to the correct sub-agent        |
+| `CreateEventAgent`       | Creates a new event and appends it to a CSV. Triggers notifications |
+| `UpdateEventAgent`       | Updates specific fields in an existing event                        |
+| `ListEventsAgent`        | Lists all current open events in table format                       |
+| `SummaryAgent`           | Generates a summary report and exports it as PDF                    |
 
 ---
 
 ## 🧰 Tools
 
-| Tool Name         | Description                                                                 |
-|-------------------|-----------------------------------------------------------------------------|
-| `csv_tool`        | Reads/writes structured event data from/to a CSV file                       |
-| `notify_tool`     | Sends alerts to MDA or Fire Department depending on context                 |
-| `pdf_export_tool` | Converts a formatted report to PDF and returns the saved file name          |
+| Tool Name         | Description                                                        |
+| ----------------- | ------------------------------------------------------------------ |
+| `csv_tool`        | Reads/writes structured event data from/to a CSV file              |
+| `notify_tool`     | Sends alerts to MDA or Fire Department depending on context        |
+| `pdf_export_tool` | Converts a formatted report to PDF and returns the saved file name |
 
 ---
 
@@ -44,6 +43,7 @@ The chatbot replaces traditional emergency operations systems by:
 > 🖼️ _Insert your architecture diagram here_
 
 Suggested diagram structure:
+
 ```
 User → Root Agent → Sub-Agents (Create / Update / List / Summary) → Tools (CSV / Notify / PDF)
 ```
@@ -73,6 +73,7 @@ User → Root Agent → Sub-Agents (Create / Update / List / Summary) → Tools 
 ## 📤 Output Examples
 
 ### 🆕 CreateEventAgent
+
 ```
 אירוע חדש נרשם בהצלחה במערכת. מספר מזהה: 4632c70c-2068-4024-98f9-f72d7296494d
 נשלחה הודעה למד"א
@@ -80,6 +81,7 @@ User → Root Agent → Sub-Agents (Create / Update / List / Summary) → Tools 
 ```
 
 ### 📋 ListEventsAgent
+
 ```
 | מזהה אירוע | שם אירוע       | סוג אירוע | מצב   | פצועים | נ"צ     |
 |------------|----------------|------------|--------|---------|--------|
@@ -87,22 +89,23 @@ User → Root Agent → Sub-Agents (Create / Update / List / Summary) → Tools 
 ```
 
 ### 📄 SummaryAgent (with PDF)
+
 ```
-דוח סיכום חמ"ל  
-תאריך: 2025-06-04  
+דוח סיכום חמ"ל
+תאריך: 2025-06-04
 
-סה"כ אירועים: 5  
-פתוחים: 4  
-סגורים: 1  
+סה"כ אירועים: 5
+פתוחים: 4
+סגורים: 1
 
-נפגעים:  
-סה"כ פצועים: 32  
-סה"כ הרוגים: 8  
+נפגעים:
+סה"כ פצועים: 32
+סה"כ הרוגים: 8
 
-אירועים לפי סוג:  
-רקטה: 2  
-שריפה: 2  
-רעידת אדמה: 1  
+אירועים לפי סוג:
+רקטה: 2
+שריפה: 2
+רעידת אדמה: 1
 
 הדוח נשמר בשם: hamal_report_20250604_143203.pdf
 ```
@@ -125,9 +128,11 @@ event_id,event_name,event_description,event_type,injured,dead,rescue_required,st
 2. Click on **Create API Key**
 3. Copy the key
 4. Save it locally:
+
    ```bash
    export GOOGLE_API_KEY="your-api-key-here"
    ```
+
    You can also add this line to your `.bashrc`, `.zshrc`, or `.env` for persistence.
 
 5. In Python or terminal:
@@ -164,6 +169,7 @@ http://localhost:8000/dev-ui?app=CommandCenterRootAgent
 ## 📸 Attachments
 
 > ✅ Add here:
+>
 > - Screenshot of example PDF
 > - Screenshot of Dev UI
 > - Architecture diagram (PNG/SVG)
