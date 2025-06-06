@@ -153,6 +153,40 @@ http://localhost:8000/dev-ui?app=CommandCenterRootAgent
 
 ---
 
+## 📊 View Results in Streamlit
+
+You can also **visualize emergency event data** using a Streamlit dashboard.
+
+### Why use it?
+
+- Friendly, interactive way to **view and filter the CSV data**
+- Great for **team monitoring** or external stakeholders
+- Can be hosted separately from the ADK app
+
+### Example code:
+
+```bash
+pip install streamlit pandas
+```
+
+```python
+# streamlit_app.py
+import pandas as pd
+import streamlit as st
+
+df = pd.read_csv("events_log.csv")
+st.title("📋 Emergency Events Dashboard")
+st.dataframe(df)
+```
+
+Then run it:
+
+```bash
+streamlit run app.py
+```
+
+---
+
 ## 📝 Design Considerations
 
 - Language: All logic and user interaction is in Hebrew
